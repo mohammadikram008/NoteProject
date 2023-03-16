@@ -94,7 +94,7 @@ const Note = () => {
       setMessage({ text: "Note Save  SuccessFully", type: "success" });
     } else {
       setOpen(true);
-      setMessage({ text: "Note Not Save  SuccessFully", type: "danger" });
+      setMessage({ text: "Failed to Save Note", type: "danger" });
     }
     // .catch((error) => {
     //   setOpen(true);
@@ -146,7 +146,7 @@ const Note = () => {
       setMessage({ text: "Note Delete  SuccessFully", type: "success" });
     } else {
       setOpen(true);
-      setMessage({ text: "Error Occurr", type: "danger" });
+      setMessage({ text: "Failed to delete Note", type: "danger" });
     }
   };
   const handleDisplayNote = () => {
@@ -236,7 +236,7 @@ const Note = () => {
           Display Note
         </button>
         <button onClick={togglePopup} className="btn-save">
-          Write Note
+          New Note
         </button>
 
         {isOpen && (
@@ -297,10 +297,9 @@ const Note = () => {
                       </tbody>
                     </Table> */}
                     {todos.map((item, index) => (
-                      <div className="note-block">
+                      <div className="note-block" key={index}>
                         <div
                           className="display-table"
-                          key={index}
                           onClick={() => handleupdate(item)}
                         >
                           <p>Title:{item.title}</p>

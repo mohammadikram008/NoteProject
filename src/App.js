@@ -17,8 +17,8 @@ function App() {
       {/* <Note /> */}
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/home" element={<Note />} />
+          {/* <Route path="/" element={<MainPage />} /> */}
+          <Route path="/" element={<Note />} />
         </Routes>
       </BrowserRouter>
     </div>
