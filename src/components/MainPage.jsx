@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import Note from "./Note";
 
 const MainPage = () => {
   const [open, setOpen] = useState(false);
@@ -14,7 +13,6 @@ const MainPage = () => {
           New Note
         </button>
       </Link>
-      {/* {open ? <Note /> : ""} */}
     </div>
   );
 };
